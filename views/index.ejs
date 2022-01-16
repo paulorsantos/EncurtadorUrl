@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encurtador de URL</title>
+  </head>
+
+  <body>
+    <h1>
+      Atividade 3: Encurtador de URL
+    </h1>
+    <b>1. Método de encurtar uma URL persistindo-a no banco de dados (POST)</b>
+    <br/>
+    Sintaxe: {URL}/create
+    <br/>
+    Ex.: http://localhost:3000/create
+    <br/>
+    Passar por parâmetro um JSON, conforme exemplo:
+    <br/>
+    {
+      "url": "http://www.santos2.com.br"
+    }  
+    <br/>
+    O retorno será um JSON, conforme exemplo:
+    <br/>
+    {
+      "id": 5,
+      "code": "dCAX4"
+    }
+    <br/>
+    <br/>
+    <b>2. Método que retorna uma url encurtada conforme um id (GET)</b>
+    <br/>
+    Sintaxe: {URL}/url/id/{ID}
+    <br/>
+    Ex.: http://localhost:3000/url/id/4
+    <br/>
+    O retorno será um JSON, conforme exemplo:
+    <br/>
+    {
+      "url": "http://www.santos2022.com.br"
+    }
+    <br/>
+    <br/>
+    <b>3. Método que retorna todas as URLs encurtadas em uma data específica (GET)</b>
+    <br/>
+    Sintaxe: {URL}/url/data/{DATA} (formato da data: AAAA-MM-DD)
+    <br/>
+    Ex.: http://localhost:3000/url/data/2022-01-16
+    <br/>
+    O retorno será um JSON, conforme exemplo:
+    <br/>
+    [
+	    {
+		    "url": "http://www.santos4.com.br"
+	    },
+	    {
+		    "url": "http://www.santos2022.com.br"
+	    },
+	    {
+		    "url": "http://www.uol.com.br"
+	    }
+    ]
+    <br/>
+    <br/>
+    <b>4. Método que retorna uma url encurtada conforme o encurtamento da URL (GET)</b>
+    <br/>
+    Sintaxe: {URL}/url/code/{CODE} (CODE é a nova URL que foi gerada a partir da URL original)
+    <br/>
+    Ex.: http://localhost:3000/url/code/uhaHo
+    <br/>
+    O retorno será um JSON, conforme exemplo:
+    <br/>
+    {
+      "url": "http://www.globo.com"
+    }
+
+    <br/>
+    <br/>
+    <b>5. Foi criado um método adicional para redirecionar para o link original dado a URL do encurtamento (GET)</b>
+    <br/>
+    Sintaxe: {URL}/{CODE} (CODE é a nova URL que foi gerada a partir da URL original)
+    <br/>
+    Ex.: http://localhost:3000/uhaHo
+    <br/>
+    Neste caso não há retorno, a aplicação apenas mostra a página da URL que foi encurtada.
+
+
+
+
+
+  </body>
+  </html>

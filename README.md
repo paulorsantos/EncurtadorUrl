@@ -32,3 +32,4 @@ O retorno será um JSON, conforme exemplo:
 Sintaxe: {URL}/{CODE} (CODE é a nova URL que foi gerada a partir da URL original)
 Ex.: http://localhost:3000/uhaHo
 Neste caso não há retorno, a aplicação apenas mostra a página da URL que foi encurtada.
+
